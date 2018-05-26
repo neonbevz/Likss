@@ -30,7 +30,10 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 html {
-  background: linear-gradient(to bottom left, #09203f 0%, #537895 100%);
+  background-image: url('/static/gradientbg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  /*background: linear-gradient(to bottom left, #09203f 0%, #537895 100%);*/
   /*background: linear-gradient(to bottom right, #D80CE899, #A700FF99, #600CE899) fixed;*/
   /*background-color: rgb(200, 200, 200);*/
 }
@@ -120,6 +123,8 @@ body { margin: 0; }
   padding-left: 8px;
   float: left;
   outline: none;
+  background-color: rgba(0, 0, 0, 0.1);
+
 }
 .switch {
   position: relative;
@@ -138,7 +143,7 @@ body { margin: 0; }
   right: 0;
   bottom: 0;
   border-radius: 27px;
-  background-color: #ccc;
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -158,7 +163,7 @@ body { margin: 0; }
 
 input:checked + .sliderSwitch {
   background-color: #2196F3;
-}quantity
+}
 
 input:focus + .sliderSwitch {
   box-shadow: 0 0 1px #2196F3;

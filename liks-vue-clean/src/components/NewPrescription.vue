@@ -2,10 +2,11 @@
   <details id="newPrescContainer" class="container detailsContainer boxshadow boxborder">
     <summary class="detailsSummary textBig">Новий рецепт</summary>
     <div class="detailsContent">
-      <input name="medSearchTerm" type="text" title="Пошук препарату" placeholder="Пошук за назвою"
+      <input name="medSearchTerm" type="text" title="Пошук препарату"
+             v-bind:placeholder="search_by_name ? 'Пошук за назвою' : 'Пошук за вмістом'"
              class="textInput textMedium boxborder boxshadow" style="width: calc(100% - 86px); margin-bottom: 10px">
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" @click="swap_placeholder()">
         <span class="sliderSwitch boxshadow"></span>
       </label>
 
@@ -32,11 +33,25 @@
 
 <script>
 export default {
-  name: 'NewPrescription'
+  name: 'NewPrescription',
+  methods: {
+    swap_placeholder: function () {
+      this.search_by_name = !this.search_by_name
+    }
+  },
+  data: function () {
+    return {
+      search_by_name: true
+    }
+  }
 }
 </script>
 
 <style scoped>
+details {
+  /*background: linear-gradient(to bottom right, #cfd9dfCC, #e2ebf0CC);*/
+  background: rgba(255, 255, 255, 0.7);
+}
 p {
   margin-top: 0;
   margin-left: 16px;

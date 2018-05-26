@@ -29,9 +29,10 @@ export default {
 <style scoped>
 #doctorContainer {
   text-align: right;
-  background: linear-gradient(to bottom right, #A8E6CF, #DCEDC1);
+  /*background-color: #5ee7dfB3;*/
+  background: linear-gradient(to bottom right, #485563CC, #29323cCC);
   /*background-color: rgb(130, 130, 130);*/
-  color: black;
+  color: white;
 }
 .gradientContainer {
   width: 30%;
